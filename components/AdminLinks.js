@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router'
 import { useAuth } from '../global/AuthContext';
+import Link from 'next/link'
 
 const AdminLinks = () => {
     const router = useRouter()
@@ -20,13 +21,17 @@ const AdminLinks = () => {
     return (
         <ul id="admin-links">
             <li>
-                Profil
+                <Link href="/profil">
+                    Profil
+                </Link>
             </li>
             <li onClick={handleLogout}>
                 Log ud
             </li>
             <li id="add-product">
-                Tilføj Produkt
+                <Link href="/add-products">
+                    Tilføj Produkt
+                </Link>
             </li>
         </ul>
     )

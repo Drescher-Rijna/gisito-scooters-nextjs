@@ -1,12 +1,18 @@
+import Link from 'next/link'
+
 const SignedOutLinks = () => {
 
     return (
         <ul id="signedout-links">
             <li>
-                Log Ind
+                <Link href="/auth/LogInd">
+                    Log Ind
+                </Link>
             </li>
             <li>
-                Opret Bruger
+                <Link href="/auth/Opret">
+                    Opret Bruger
+                </Link>
             </li>
         </ul>
     )

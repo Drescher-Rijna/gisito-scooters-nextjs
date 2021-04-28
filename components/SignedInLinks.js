@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router'
 import { useAuth } from '../global/AuthContext';
+import Link from 'next/link'
 
 const SignedInLinks = () => {
     const router = useRouter()
@@ -20,7 +21,9 @@ const SignedInLinks = () => {
     return (
         <ul id="signedin-links">
             <li>
-                Profil
+                <Link href="/profil">
+                    Profil
+                </Link>
             </li>
             <li onClick={handleLogout}>
                 Log ud

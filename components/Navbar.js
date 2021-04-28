@@ -73,7 +73,9 @@ const Navbar = () => {
     return (
         <header>
             <div id="logo">
-                <Image src="/logo.svg" width={50} height={20} />
+                <Link href="/">  
+                    <Image src="/logo.svg" width={50} height={20} />
+                </Link>
             </div>
             {screenSize < 768 &&
             <button id="menu-btn" onClick={handleBurgermenu}>
@@ -110,7 +112,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <div id="cart">
-                            <Image src="/cart-icon.svg" width={55} height={55} />
+                            <Link href="/kurv">
+                                <Image src="/cart-icon.svg" width={55} height={55} />
+                            </Link>
                         </div>
                     </li>
                 </ul>
@@ -141,19 +145,19 @@ const Navbar = () => {
                         <nav id="global-menu">
                             <ul id="menu-liste">
                                 <li className="nav-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                        LØBEHJUL
+                                    <Link href="/produkter/Komplette">LØBEHJUL</Link>
                                 </li>
                                 <li className="nav-link" onClick={handleDropdown}>
                                     DELE
                                     <ul id="dropdown-liste" className={dropdown ? 'dropdown-list-active' : 'dropdown-list'}>
                                         <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                                BARS
+                                            <Link href="/produkter/Bars">BARS</Link>    
                                         </li>
                                         <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                                DECKS
+                                            <Link href="/produkter/Decks">DECKS</Link>    
                                         </li>
                                         <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                                HJUL
+                                            <Link href="/produkter/Hjul">HJUL</Link>     
                                         </li>
                                     </ul>
                                 </li>
