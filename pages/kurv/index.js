@@ -37,7 +37,7 @@ const Cart = () => {
         </div>
 
     ) : (
-        <div>Kurven er tom</div>
+        <div className="cart-container"><p id="cart-empty">Kurven er tom</p></div>
     )
 }
 

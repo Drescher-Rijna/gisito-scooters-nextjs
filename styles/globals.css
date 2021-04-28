@@ -840,3 +840,15 @@ button,
 .cart-item-img {
   cursor: pointer;
 }
+
+/* PAGES THAT NEED 100VH */
+.profil-container,
+.cart-container {
+  min-height: 100vh;
+}
+
+.logind-container,
+.OpretBruger-container {
+  min-height: 65vh;
+}
+

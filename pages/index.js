@@ -8,8 +8,9 @@ import { useEffect, useState } from 'react'
 import { getCollectionData } from '../global/GetCollection'
 
 
-export default function Home({ completes, bars, decks, wheels }) {
+export default function Home({ completes, bars, decks, wheels, allProducts }) {
     const [screenSize, setScreenSize] = useState(window.innerWidth);
+    
 
     useEffect(() => {
         function handleResize() {
@@ -20,7 +21,8 @@ export default function Home({ completes, bars, decks, wheels }) {
         return () => window.removeEventListener("resize", handleResize);
     }, [screenSize]);
 
-
+  
+   
 
   return (
     <div>
@@ -154,13 +156,15 @@ export const getStaticProps = async () => {
   const bars = await getCollectionData("bars");
   const decks = await getCollectionData("decks");
   const wheels = await getCollectionData("wheels");
+  const allProducts = {...completes, ...bars, ...decks, ...wheels};
 
   return {
     props: {
       completes: completes,
       bars: bars,
       decks: decks,
-      wheels: wheels
+      wheels: wheels,
+      allProducts: allProducts
     }
   }
 }

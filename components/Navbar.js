@@ -4,14 +4,21 @@ import Image from 'next/image'
 import SignedOutLinks from "./SignedOutLinks";
 import AdminLinks from "./AdminLinks";
 import NavbarDesktop from "./NavbarDesktop";
-
+import Fuse from 'fuse.js';
+import { useProducts } from "../global/ProductsContext";
+import Link from 'next/link'
 
 const Navbar = () => {
+    
     const { currentUser } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
     const [userLinks, setUserLinks] = useState(false);
     const [dropdown, setDropdown] = useState(false);
     const [screenSize, setScreenSize] = useState(window.innerWidth);
+    //SEARCH
+    const [searchTerm, setSearchTerm] = useState("");
+    const [data, setData] = useState([])
+    const {completes, decks, bars, wheels} = useProducts();
 
     useEffect(() => {
         function handleResize() {
@@ -36,6 +43,32 @@ const Navbar = () => {
         setDropdown(!dropdown)
         console.log(dropdown)
     }
+
+    // SEARCH
+    const handleSearch = (e) => {
+        console.log("searhtype")
+        const value = e.target.value;
+        setSearchTerm(value)
+        console.log(searchTerm)
+    }
+
+    useEffect(() => {
+        console.log("searhfilter")
+        console.log(searchTerm)
+        const fuse = new Fuse([...completes, ...decks, ...wheels, ...bars], { threshold: 0.4, keys: ['product_name'] })
+        console.log(fuse)
+
+        const results = fuse.search(searchTerm).map(({ item }) => item);
+        console.log(results)
+
+        if (searchTerm.length > 3 && results.length > 0) {
+            setData(results)
+            console.log(data)
+            console.log(data.length)
+        } else {
+            setData("")
+        }
+    }, [searchTerm])
 
     return (
         <header>
@@ -83,11 +116,24 @@ const Navbar = () => {
                 </ul>
             </div>
             <div id="searchbar-container">
-                <input id="searchbar" type="text" placeholder="Search.."></input>
+                <input id="searchbar" value={searchTerm} onChange={handleSearch} type="text" placeholder="Search.."></input>
                 <div id="search-result-container">
-                    <ul id="search-results">
+                    {data.length > 0 &&
+                        <ul id="search-results">
+                            {data.map((item) => (
+                                <Link key={item.id} href={'/details/' + item.category + '/' + item.id}>
+                                    <li>
+                                        <img src={item.product_img} />
+                                        <p>
+                                            {item.product_name}
+                                        </p>
+                                    </li>
+                                </Link>
+                            ))
 
-                    </ul>
+                            }
+                        </ul>
+                    }
                 </div>
             </div>
             {screenSize < 768 &&
@@ -124,4 +170,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-

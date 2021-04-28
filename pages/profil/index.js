@@ -29,7 +29,7 @@ const Profil = () => {
 
 
     return (
-            <> 
+            <div className="profil-container"> 
                 {userData.map((user) => (
                     <div key={user.id} id="profil-container">
                         <h2 >
@@ -42,7 +42,7 @@ const Profil = () => {
                 ))
 
                 }
-            </>
+            </div>
        
     )
 }
