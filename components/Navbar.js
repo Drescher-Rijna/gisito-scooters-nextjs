@@ -7,9 +7,10 @@ import NavbarDesktop from "./NavbarDesktop";
 import Fuse from 'fuse.js';
 import { useProducts } from "../global/ProductsContext";
 import Link from 'next/link'
+import { useCart } from "../global/CartContext";
 
 const Navbar = () => {
-    
+    const {shoppingCart} = useCart();
     const { currentUser } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
     const [userLinks, setUserLinks] = useState(false);
@@ -119,6 +120,7 @@ const Navbar = () => {
                             <Link href="/kurv">
                                 <Image src="/cart-icon.svg" width={55} height={55} />
                             </Link>
+                            <div id="cart-counter">{'(' + shoppingCart.length + ')'}</div>
                         </div>
                     </li>
                 </ul>
@@ -178,9 +180,14 @@ const Navbar = () => {
                     </div>
                 }
 
+                {screenSize == 768 &&
+                    <NavbarDesktop />
+                }
+
                 {screenSize > 768 &&
                     <NavbarDesktop />
                 }
+
         </header>
     )
 }

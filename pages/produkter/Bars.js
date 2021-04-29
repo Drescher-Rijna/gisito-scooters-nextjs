@@ -7,6 +7,12 @@ export default function BarsGallery({bars}) {
         <div>
             <DeleGallery />
             <section className="gallery-container">
+                <h1>
+                    BARS
+                </h1>
+                <div className="underline">
+
+                </div>
                 <div className="gallery-list">
                     {   bars.map((bar) => (
                             <div className="gallery-col" key={bar.id}>

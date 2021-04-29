@@ -24,5 +24,7 @@
 		<circle cx="86.1" cy="195.9" r="11.5"/>
 		<circle cx="148.5" cy="195.9" r="11.5"/>
 	</g>
+	<circle class="st1" cx="201.7" cy="73.5" r="30.9"/>
+	<text transform="matrix(1 0 0 1 195.2868 82.9358)" class="st2 st3 st4">1</text>
 </g>
 </svg>

@@ -7,6 +7,12 @@ export default function WheelsGallery({wheels}) {
         <div>
             <DeleGallery />
             <section className="gallery-container">
+                <h1>
+                    HJUL
+                </h1>
+                <div className="underline">
+
+                </div>
                 <div className="gallery-list">
                     {   wheels.map((wheel) => (
                             <div className="gallery-col" key={wheel.id}>

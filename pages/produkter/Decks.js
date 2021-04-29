@@ -7,6 +7,12 @@ export default function DecksGallery({decks}) {
         <div>
             <DeleGallery />
             <section className="gallery-container">
+                <h1>
+                    DECKS
+                </h1>
+                <div className="underline">
+
+                </div>
                 <div className="gallery-list">
                     {   decks.map((deck) => (
                             <div className="gallery-col" key={deck.id}>

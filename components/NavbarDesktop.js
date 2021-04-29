@@ -32,17 +32,17 @@ const NavbarDesktop = () => {
                             DELE
                             <ul id="dropdown-liste-desktop" className={dropdown ? 'dropdown-list-active' : 'dropdown-list'}>
                                 <Link href="/produkter/Bars">
-                                    <li className="dropdown-link-desktop">
+                                    <li className="dropdown-link-desktop" onClick={handleDropdown}>
                                         BARS
                                     </li>
                                 </Link>
                                 <Link href="/produkter/Decks">
-                                    <li className="dropdown-link-desktop">
+                                    <li className="dropdown-link-desktop" onClick={handleDropdown}>
                                         DECKS
                                     </li>
                                 </Link>
                                 <Link href="/produkter/Hjul">
-                                    <li className="dropdown-link-desktop">
+                                    <li className="dropdown-link-desktop" onClick={handleDropdown}>
                                         HJUL
                                     </li>
                                 </Link>        

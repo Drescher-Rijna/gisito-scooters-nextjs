@@ -14,6 +14,12 @@ export const getStaticProps = async () => {
 export default function CompletesGallery({completes}) {
     return (
         <section className="gallery-container">
+                <h1>
+                    LØBEHJUL
+                </h1>
+                <div className="underline">
+
+                </div>
                 <div className="gallery-list">
                     {   completes.map((complete) => (
                             <div className="gallery-col" key={complete.id}>

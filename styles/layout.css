@@ -2,11 +2,14 @@ header * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: NightBits;
+    letter-spacing: 1px;
 }
 
 header a {
     color: white;
     text-decoration: none;
+    
 }
 
 .st0{opacity:0.6;enable-background:new    ;}
@@ -194,7 +197,7 @@ header {
     margin-top: 5px;
     display: grid;
     row-gap: 5px;
-    grid-template-columns: 0fr 1fr 0fr;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
     grid-template-areas: 
                         ". logo burger"
                         "searchbar searchbar tools";
@@ -357,10 +360,12 @@ header {
 #search-results {
     max-height: 80vh;
     overflow-y: scroll;
+    width: 100%;
 }
 
 #search-results * {
-    color: #3d3d3d;
+    color: #231f20;
+    font-family: NightBits;
 }
 
 /* DESKTOP */
@@ -531,6 +536,12 @@ header {
     
 }
 
+@media only screen and (max-width: 768px) {
+    #searchbar {
+        margin-left: 10px;
+    }
+}
+
 @media only screen and (min-width: 992px) {
     #logo {
         margin-left: 3em;
@@ -542,7 +553,7 @@ header {
 
     #searchbar-container #searchbar {
         padding: 10px 5px;
-        width: 20rem;
+        width: 100%;
     }
 
     #user-tools img {

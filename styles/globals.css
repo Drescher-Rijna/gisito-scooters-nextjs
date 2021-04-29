@@ -21,6 +21,17 @@ a {
     font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: NightBits;
+  src: url(/public/NightBits.otf);
+}
+
+h1, h2, h3, h4 {
+  font-family: NightBits;
+  color: #231f20;
+  
+}
+
 
 
 /* INDEX */
@@ -37,8 +48,14 @@ a {
 #top3-section * {
   text-align: center;
   text-decoration: none;
-  color: #3d3d3d;
+  color: #231f20;
   position: relative;
+}
+
+#top3-section h1,
+#top3-section h2,
+#top3-section h3 {
+  color: #231f20;
 }
 
 .top3-title {
@@ -355,14 +372,13 @@ button:active {
 .gallery-list * {
   text-align: center;
   text-decoration: none;
-  color: #3d3d3d;
+  color: #231f20;
 }
 
 
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   
 }
 
@@ -376,13 +392,39 @@ button:active {
   padding: 15px 10px;
 }
 
+.gallery-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.gallery-container .underline {
+  min-width: 100px;
+  width: 100%;
+  height: 1px;
+  background-color: #231f20;
+  margin-bottom: 1em;
+  margin-top: -1em;
+}
+
 .gallery-container {
   margin: 2em 15px;
 }
 
 .gallery-container img {
-  max-height: 140px;
+  max-height: 120px;
 }
+
+.gallery-container .deck-img {
+  max-height: 45px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .gallery-list {
+    justify-content: center;
+    
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .gallery-list > * {
@@ -392,16 +434,29 @@ button:active {
       width: 30%;
       padding: 15px 10px;
   }
+
+  .gallery-container .deck-img {
+    max-height: 70px;
+  }
 }
 
 
 @media only screen and (min-width: 1080px) {
   .gallery-list > * {
-      flex-basis: 20%;
+      flex-basis: 25%;
   }
   .gallery-col {
       width: 100%;
       padding: 15px 10px;
+  }
+
+  .gallery-container {
+    margin: 0 5em;
+    margin-top: 3em;
+  }
+
+  .gallery-container .deck-img {
+    max-height: 80px;
   }
 }
 
@@ -443,13 +498,15 @@ button:active {
   margin-bottom: 0;
   margin-left: 10px;
   text-align: left;
+  font-size: 2rem;
 }
 
 .details-product-options p {
   grid-area: pris;
-  margin-top: 0;
+  margin-top: 20px;
   margin-left: 10px;
   text-align: left;
+  font-size: 1.2rem;
 }
 
 .details-buttons {
@@ -858,3 +915,15 @@ button,
   min-height: 65vh;
 }
 
+#cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#cart-counter {
+  margin: 0;
+  padding: 0;
+  margin-left: -10px;
+}
