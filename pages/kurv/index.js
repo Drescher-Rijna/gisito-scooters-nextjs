@@ -1,5 +1,6 @@
 import { useCart } from "../../global/CartContext"
 import Link from 'next/link'
+import Head from 'next/head'
 
 const Cart = () => {
     const {shoppingCart, dispatch} = useCart();
@@ -7,6 +8,10 @@ const Cart = () => {
     
     return shoppingCart.length ? (
         <div className="cart-container">
+            <Head>
+                <title>Gisito Scooters - Kurv</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <h1>Kurv</h1>
                     <div className="cart-content">
                         {shoppingCart.map(product => {
@@ -37,7 +42,13 @@ const Cart = () => {
         </div>
 
     ) : (
-        <div className="cart-container"><p id="cart-empty">Kurven er tom</p></div>
+        <div className="cart-container">
+            <Head>
+                <title>Gisito Scooters - Kurv</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
+            <p id="cart-empty">Kurven er tom</p>
+        </div>
     )
 }
 

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useRouter } from 'next/router'
 import { useAuth } from "../../global/AuthContext"
 import Link from 'next/link'
+import Head from 'next/head'
 
 const LogInd = () => {
     const router = useRouter()
@@ -29,6 +30,10 @@ const LogInd = () => {
 
     return (
         <div className="logind-container">
+            <Head>
+                <title>Gisito Scooters - Log Ind</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <h2>Log Ind</h2>
             <form className="auth-form" onSubmit={handleSubmit}>
                 <label>E-mail</label>

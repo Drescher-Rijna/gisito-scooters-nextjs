@@ -1,5 +1,6 @@
 import { getCollectionData } from "../../global/GetCollection";
 import Link from "next/link";
+import Head from 'next/head'
 
 export const getStaticProps = async () => {
     const completes = await getCollectionData("completes");
@@ -14,6 +15,10 @@ export const getStaticProps = async () => {
 export default function CompletesGallery({completes}) {
     return (
         <section className="gallery-container">
+            <Head>
+                <title>Gisito Scooters - Løbehjul</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
                 <h1>
                     LØBEHJUL
                 </h1>

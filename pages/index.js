@@ -26,6 +26,10 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
 
   return (
     <div>
+        <Head>
+        <title>Gisito Scooters</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
         <div className="content">
           <section id="hero-section">
               {screenSize < 768 &&

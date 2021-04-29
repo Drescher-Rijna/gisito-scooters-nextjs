@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../global/AuthContext';
 import { db } from '../../global/Firebase';
+import Head from 'next/head'
 
 const Profil = () => {
     const [userData, setUserData] = useState([]);
@@ -30,6 +31,10 @@ const Profil = () => {
 
     return (
             <div className="profil-container"> 
+            <Head>
+                <title>Gisito Scooters - Din Profil</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
                 {userData.map((user) => (
                     <div key={user.id} id="profil-container">
                         <h2 >

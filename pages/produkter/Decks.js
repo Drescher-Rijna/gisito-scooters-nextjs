@@ -1,10 +1,15 @@
 import Link from "next/link";
 import DeleGallery from "../../components/DeleNav";
 import { getCollectionData } from "../../global/GetCollection";
+import Head from 'next/head'
 
 export default function DecksGallery({decks}) {
     return (
         <div>
+            <Head>
+                <title>Gisito Scooters - Decks</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <DeleGallery />
             <section className="gallery-container">
                 <h1>

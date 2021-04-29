@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../../../global/CartContext";
 import { getCollectionData } from "../../../global/GetCollection";
+import Head from 'next/head'
 
 export const getStaticPaths = async () => {
     const completes = await getCollectionData("completes");
@@ -47,6 +48,10 @@ export default function CompleteDetails({product}) {
 
     return (
         <section className="details-page">
+            <Head>
+                <title>{'Gisito Scooters - ' + product.product_name + ' Løbehjul'}</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <section className="details-product-options">
                 <div className="product-image complete-details-img">
                     <img src={product.product_img} />

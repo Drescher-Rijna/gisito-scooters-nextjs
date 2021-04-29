@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AddComplete from "../../components/AddComplete";
 import AddDele from "../../components/AddDele";
+import Head from 'next/head'
 
 const AddProduct = () => {
     const [option, setOption] = useState("komplete");
@@ -14,6 +15,10 @@ const AddProduct = () => {
 
     return (
         <div id="add-product-container">
+            <Head>
+                <title>Gisito Scooters - Tilføj Produkter</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <h1>Tilføj Produkt</h1>
 
             <select className="add-product-select" onChange={handleOption}>

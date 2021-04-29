@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Link } from 'next/link'
 import { useRouter } from 'next/router'
 import { useAuth } from "../../global/AuthContext"
+import Head from 'next/head'
 
 const Opret = () => {
         const router = useRouter()
@@ -34,6 +35,10 @@ const Opret = () => {
 
     return (
         <div className="OpretBruger-container">
+            <Head>
+                <title>Gisito Scooters - Opret Dig</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <h2>Opret en bruger</h2>
             <form className="auth-form" onSubmit={handleSubmit}>
                 <label>Fornavn og Efternavn</label>
