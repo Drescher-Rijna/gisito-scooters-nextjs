@@ -52,6 +52,10 @@ const Navbar = () => {
         console.log(searchTerm)
     }
 
+    const handleSearchItemSelect = () => {
+        setSearchTerm('')
+    }
+
     useEffect(() => {
         console.log("searhfilter")
         console.log(searchTerm)
@@ -126,7 +130,7 @@ const Navbar = () => {
                         <ul id="search-results">
                             {data.map((item) => (
                                 <Link key={item.id} href={'/details/' + item.category + '/' + item.id}>
-                                    <li>
+                                    <li onClick={handleSearchItemSelect} > 
                                         <img src={item.product_img} />
                                         <p>
                                             {item.product_name}
@@ -144,21 +148,29 @@ const Navbar = () => {
                     <div id="mobil-menu-container" className={menuOpen ? 'mobil-menu-container-active' : 'mobil-menu-container'}>
                         <nav id="global-menu">
                             <ul id="menu-liste">
-                                <li className="nav-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                    <Link href="/produkter/Komplette">LØBEHJUL</Link>
-                                </li>
+                                <Link href='/produkter/Komplette'>
+                                    <li className="nav-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
+                                        LØBEHJUL
+                                    </li>
+                                </Link>
                                 <li className="nav-link" onClick={handleDropdown}>
                                     DELE
                                     <ul id="dropdown-liste" className={dropdown ? 'dropdown-list-active' : 'dropdown-list'}>
-                                        <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                            <Link href="/produkter/Bars">BARS</Link>    
-                                        </li>
-                                        <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                            <Link href="/produkter/Decks">DECKS</Link>    
-                                        </li>
-                                        <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
-                                            <Link href="/produkter/Hjul">HJUL</Link>     
-                                        </li>
+                                        <Link href='/produkter/Bars'>
+                                            <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
+                                                BARS  
+                                            </li>
+                                        </Link> 
+                                        <Link href='/produkter/Decks'> 
+                                            <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
+                                                DECKS  
+                                            </li>
+                                        </Link>
+                                        <Link href='/produkter/Hjul'>
+                                            <li className="dropdown-link" onClick={screenSize < 768 ? handleBurgermenu : undefined}>
+                                                HJUL  
+                                            </li>
+                                        </Link>
                                     </ul>
                                 </li>
                             </ul>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Link from 'next/link'
 
 const NavbarDesktop = () => {
     const [userLinks, setUserLinks] = useState(false);
@@ -22,21 +23,29 @@ const NavbarDesktop = () => {
     return (
                 <nav id="global-menu-desktop">
                     <ul id="menu-liste-desktop">
-                        <li className="nav-link-desktop">
-                            LØBEHJUL
-                        </li>
+                        <Link href="/produkter/Komplette">
+                            <li className="nav-link-desktop">
+                                LØBEHJUL
+                            </li>
+                        </Link>
                         <li className="nav-link-desktop" onClick={handleDropdown}>
                             DELE
                             <ul id="dropdown-liste-desktop" className={dropdown ? 'dropdown-list-active' : 'dropdown-list'}>
-                                <li className="dropdown-link-desktop">
-                                    BARS
-                                </li>
-                                <li className="dropdown-link-desktop">
-                                    DECKS
-                                </li>
-                                <li className="dropdown-link-desktop">
-                                    HJUL
-                                </li>
+                                <Link href="/produkter/Bars">
+                                    <li className="dropdown-link-desktop">
+                                        BARS
+                                    </li>
+                                </Link>
+                                <Link href="/produkter/Decks">
+                                    <li className="dropdown-link-desktop">
+                                        DECKS
+                                    </li>
+                                </Link>
+                                <Link href="/produkter/Hjul">
+                                    <li className="dropdown-link-desktop">
+                                        HJUL
+                                    </li>
+                                </Link>        
                             </ul>
                         </li>
                     </ul>
