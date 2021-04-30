@@ -14,7 +14,9 @@ header a {
 }
 
 .st0{opacity:0.6;enable-background:new    ;}
-.st1{font-family:'NightBits';}
+.st1{font-family: prohibition,sans-serif;
+    font-weight: 400;
+    font-style: normal;}
 .st2{font-size:49px;}
 .st3{fill:#231F20;}
 .st4{opacity:0.6;fill:none;stroke:#000000;stroke-width:5.3717;stroke-miterlimit:10;enable-background:new    ;}
