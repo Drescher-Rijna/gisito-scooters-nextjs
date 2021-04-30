@@ -35,6 +35,7 @@ const BarDetails = ({ product }) => {
     const [product_name, setProduct_Name] = useState('');
     const [product_img, setProduct_Img] = useState('');
     const [price, setPrice] = useState('');
+    const [loading, setLoading] = useState(false)
 
     const handleAdd = () => {
         console.log("handeling add")
@@ -42,7 +43,7 @@ const BarDetails = ({ product }) => {
         setProduct_Name('');
         setProduct_Img('');
         setPrice('');
-        
+        setLoading(true)
     }
 
 
@@ -64,10 +65,11 @@ const BarDetails = ({ product }) => {
                     {product.price + " kr"}
                 </p>
                 <div className="details-buttons">
-                    <button className="cart-btn" onClick={handleAdd}>
-                        LÆG I KURV
+                    <button className={loading ? 'cart-btn-active' : 'cart-btn'} disabled={loading} onClick={handleAdd} >
+                        {!loading && "LÆG I KURV"}
+                        {loading && <p>LAGT I KURV &#10003;</p>}
                     </button>
-                    <button className="buynow-btn">
+                    <button className="buynow-btn" >
                         KØB NU
                     </button>
                 </div>

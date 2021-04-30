@@ -35,6 +35,7 @@ export default function WheelDetails({product}) {
     const [product_name, setProduct_Name] = useState('');
     const [product_img, setProduct_Img] = useState('');
     const [price, setPrice] = useState('');
+    const [loading, setLoading] = useState(false)
 
     const handleAdd = () => {
         console.log("handeling add")
@@ -42,7 +43,7 @@ export default function WheelDetails({product}) {
         setProduct_Name('');
         setProduct_Img('');
         setPrice('');
-        
+        setLoading(true)
     }
 
     return (
@@ -63,13 +64,14 @@ export default function WheelDetails({product}) {
                 {product.price + " kr"}
             </p>
             <div className="details-buttons">
-                <button className="cart-btn" onClick={handleAdd}>
-                    LÆG I KURV
-                </button>
-                <button className="buynow-btn">
-                    KØB NU
-                </button>
-            </div>
+                    <button className={loading ? 'cart-btn-active' : 'cart-btn'} disabled={loading} onClick={handleAdd} >
+                        {!loading && "LÆG I KURV"}
+                        {loading && <p>LAGT I KURV &#10003;</p>}
+                    </button>
+                    <button className="buynow-btn" >
+                        KØB NU
+                    </button>
+                </div>
         </section>
         <section className="details-product-description">
             <h2>

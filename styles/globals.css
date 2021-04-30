@@ -533,6 +533,7 @@ button:active {
   justify-content: center;
   justify-content: space-evenly;
   margin-top: 30px;
+  text-align: center;
 }
 
 .details-buttons .cart-btn  {
@@ -546,6 +547,28 @@ button:active {
   cursor: pointer;
   color: white;
   font-weight: 700;
+  text-align: center;
+}
+
+.details-buttons .cart-btn-active  {
+  outline: none;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+  width: 70%;
+  background-color: #062e4f;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  height: 50px;
+}
+
+.details-buttons .cart-btn-active p {
+  text-align: center;
+  margin: auto;
+  font-size: 1rem;
 }
 
 .details-buttons .buynow-btn {
