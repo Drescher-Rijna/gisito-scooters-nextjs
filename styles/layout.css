@@ -2,8 +2,9 @@ header * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: NightBits;
-    letter-spacing: 1px;
+    font-family: prohibition,sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 header a {
@@ -365,7 +366,9 @@ header {
 
 #search-results * {
     color: #231f20;
-    font-family: NightBits;
+    font-family: prohibition,sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 /* DESKTOP */
