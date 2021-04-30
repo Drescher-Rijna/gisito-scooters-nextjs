@@ -24,6 +24,7 @@ a {
 @font-face {
   font-family: NightBits;
   src: url(/public/NightBits.otf);
+  src: url(/public/NightBits.woff);
 }
 
 .st0{opacity:0.6;enable-background:new    ;}
