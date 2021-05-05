@@ -35,14 +35,18 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
               {screenSize < 768 &&
                   <Image src="/hero-image-mobile.jpg" width={700} height={700} />
               }
+
+                {screenSize == 768 &&
+                    <Image src="/hero-image-desktop.jpg" width={1920} height={500} />
+                }
               
               {screenSize > 768 &&
                   <Image src="/hero-image-desktop.jpg" width={1920} height={500} />
               }
           </section>
-          <section id="top3-section">
-              <div id="top3-completes">
-                  <h2>
+          <section id="top3-section" className="sm:mx-3 md:grid  md:grid-cols-2 md:mx-20">
+              <div id="top3-completes" className="md: mb-12 md: px-4">
+                  <h2 className="text-4xl mb-2">
                       TOP 3 LØBEHJUL
                   </h2>
                   <div className="top3-list">
@@ -68,8 +72,8 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
                     }
                   </div>
               </div>
-              <div id="top3-completes">
-                  <h2>
+              <div id="top3-bars" className="md: mb-12 md: px-4">
+                  <h2 className="text-4xl mb-2">
                       TOP 3 BARS
                   </h2>
                   <div className="top3-list">
@@ -95,8 +99,8 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
                     }
                   </div>
               </div>
-              <div id="top3-completes">
-                  <h2>
+              <div id="top3-decks" className="md: mb-12 md: px-4">
+                  <h2 className="text-4xl mb-2">
                       TOP 3 DECKS
                   </h2>
                   <div className="top3-list">
@@ -122,8 +126,8 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
                     }
                   </div>
               </div>
-              <div id="top3-completes">
-                  <h2>
+              <div id="top3-hjul" className="md: mb-12 md: px-4">
+                  <h2 className="text-4xl mb-2">
                       TOP 3 HJUL
                   </h2>
                   <div className="top3-list">

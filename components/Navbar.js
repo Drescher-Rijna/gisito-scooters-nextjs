@@ -79,7 +79,7 @@ const Navbar = () => {
         <header>
             <div id="logo">
                 <Link href="/">  
-                    <Image src="/logo.svg" width={50} height={20} />
+                    <Image src="/logo.png" width={388} height={75} />
                 </Link>
             </div>
             {screenSize < 768 &&
