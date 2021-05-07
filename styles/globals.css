@@ -1107,8 +1107,8 @@ button:active {
 .details-product-description {
   @apply mx-4;
   @apply py-6;
-  border-top: 1px #6d6d6d solid;
-  border-bottom: 1px #6d6d6d solid;
+  border-top: .3px #6d6d6d solid;
+  border-bottom: .3px #6d6d6d solid;
 }
 
 .details-product-description h2 {
