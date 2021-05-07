@@ -1,6 +1,7 @@
 import { useCart } from "../../global/CartContext"
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 
 const Cart = () => {
     const {shoppingCart, dispatch} = useCart();
@@ -17,15 +18,19 @@ const Cart = () => {
                         {shoppingCart.map(product => {
                             return (
                             <div className="cart-item" key={product.id} >
-                                <Link className="cart-product-link" href={"/details/" + product.category + "/" + product.productId}>
-                                    <img className="cart-item-img" src={product.product_img} />
-                                </Link>
+                                <div className="cart-img">
+                                    <Link className="cart-product-link" href={"/details/" + product.category + "/" + product.productId}>
+                                        <img src={product.product_img} className="cart-item-img" />
+                                    </Link>
+                                </div>
+                                
                                 <h4 className="cart-item-name">
                                     {product.category === "komplette" && product.product_name + " Løbehjul"}
                                     {product.category === "bars" && product.product_name + " Bars"}
                                     {product.category === "decks" && product.product_name + " Deck"}
                                     {product.category === "hjul" && product.product_name + " Hjul"}
                                 </h4>
+                                
                                 <p className="cart-item-price">
                                     {product.price + " kr"}
                                 </p>

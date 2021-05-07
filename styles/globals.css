@@ -1011,13 +1011,14 @@ button:active {
   grid-area: produktnavn;
   margin-bottom: 0;
   margin-left: 10px;
+  margin-top: 0.75em;
   text-align: left;
-  @apply text-5xl;
+  @apply text-4xl;
 }
 
 .details-product-options p {
   grid-area: pris;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 10px;
   text-align: left;
   font-size: 1.2rem;
@@ -1037,7 +1038,6 @@ button:active {
   outline: none;
   border: none;
   margin-left: auto;
-  margin-right: auto;
   padding: 10px 10px;
   width: 80%;
   background-color: #1C75BC;
@@ -1045,20 +1045,23 @@ button:active {
   color: white;
   font-weight: 700;
   text-align: center;
+  width: 200px;
+  height: 50px;
 }
 
 .details-buttons .cart-btn-active  {
   outline: none;
   border: none;
   margin-left: auto;
-  margin-right: auto;
   padding: 10px 10px;
-  width: 70%;
+  width: 80%;
   background-color: #062e4f;
   cursor: pointer;
   color: white;
   font-weight: 700;
   text-align: center;
+  margin: 0;
+  width: 200px;
   height: 50px;
 }
 
@@ -1080,6 +1083,8 @@ button:active {
   cursor: pointer;
   color: white;
   font-weight: 700;
+  width: 200px;
+  height: 50px;
 }
 
 .details-product-options {
@@ -1094,29 +1099,31 @@ button:active {
 .details-product-description {
   border-top: .2px #6d6d6d solid;
   border-bottom: .2px #6d6d6d solid;
-  margin-right: 5px;
-  margin-left: 5px;
   padding: 5px 0;
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: left;
 }
 
+.details-product-description {
+  @apply mx-3;
+}
+
 .details-product-description h2 {
   margin-bottom: 0;
   padding-bottom: 0;
-  @apply text-3xl;
+  @apply text-2xl;
   
 }
 
 .details-product-description h3 {
   margin-top: 15px;
-  @apply text-2xl
+  @apply text-xl
 }
 
 .details-product-specs h2 {
-  text-align: left;
-  @apply text-3xl;
+  @apply text-left;
+  @apply text-2xl;
 }
 
 .details-product-specs {
@@ -1128,6 +1135,11 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
 }
 
 .table .table-row:nth-child(odd) {
@@ -1211,24 +1223,17 @@ button:active {
       margin: 0;
       margin-left: auto;
       margin-right: 1em;
-      padding: 5px;
-      width: 200px;
-      background-color: #1C75BC;
-      height: 50px;
   }
   
   .details-buttons .buynow-btn {
       margin: 0;
       margin-right: auto;
       margin-left: 1em;
-      padding: 5px 50px;
-      width: 200px;
-      background-color: #00A14B;
-      height: 50px;
   }
   
   .details-product-options {
       margin-top: 1em;
+      margin-right: 2em;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
       grid-template-rows: 0.5fr 0.2fr 0fr 1fr;
@@ -1312,8 +1317,13 @@ button:active {
 /* CART */
 .cart-container {
   max-width: 100%;
-  margin: 0 1em;
+  margin: 1em 1em;
   
+}
+
+.cart-container h1 {
+  @apply text-lg;
+  @apply mb-2;
 }
 
 .buynow-btn-cart {
@@ -1329,12 +1339,29 @@ button:active {
   justify-content: center;
 }
 
-.cart-item .cart-item-img {
+.cart-item {
+  height: 120px;
+}
+
+.cart-img {
   grid-area: item-img;
-  width: 100px;
-  margin-bottom: auto;
-  margin-top: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.cart-item .cart-item-img {
+  min-height: 90px;
+  min-width: 85px;
+  @apply flex;
+  @apply justify-self-center;
+  @apply align-middle;
+  @apply my-auto;
   padding-right: 1em;
+}
+
+.cart-item img {
+  height: 100px;
 }
 
 .cart-item .cart-item-name {
@@ -1377,7 +1404,7 @@ button:active {
 @media only screen and (min-width: 768px) {
   .cart-container {
       max-width: 100%;
-      margin: 0 2em;
+      margin: 1em 2em;
       
   }
   
@@ -1390,7 +1417,6 @@ button:active {
   
   .cart-item .cart-item-img {
       grid-area: item-img;
-      width: 100px;
       margin-bottom: auto;
       margin-top: auto;
       padding-right: 1em;
