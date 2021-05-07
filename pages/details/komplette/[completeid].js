@@ -81,9 +81,9 @@ export default function CompleteDetails({product}) {
                 <p>
                     {product.description}
                 </p>
-                <h3>
-                    Tech feature
-                </h3>
+                {product.tech_feature && <h3>
+                Tech feature
+                </h3>}
                 <ul>
                     <li>
                         {product.tech_feature}

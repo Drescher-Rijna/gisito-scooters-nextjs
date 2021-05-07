@@ -80,9 +80,9 @@ export default function WheelDetails({product}) {
             <p>
                 {product.description}
             </p>
-            <h3>
+            {product.tech_feature && <h3>
                 Tech feature
-            </h3>
+            </h3>}
             <ul>
                 <li>
                     {product.tech_feature}
@@ -90,6 +90,7 @@ export default function WheelDetails({product}) {
             </ul>
         </section>
         <section className="details-product-specs">
+        <h2>SPECIFIKATIONER</h2>
             <div className="table">
                 <div className="table-column-1">
                     <div className="table-row">
