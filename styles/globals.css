@@ -486,7 +486,6 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
-      margin-left: 2em;
   }
 
   #menu-liste-desktop .nav-link-desktop {
@@ -519,7 +518,6 @@ header {
   #dropdown-liste-desktop .dropdown-link-desktop:hover {
       background-color: #1C75BC;
       color: white;
-      font-weight: 600;
   }
 
   /* DROPDOWN LIST */
