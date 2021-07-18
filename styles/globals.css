@@ -636,10 +636,12 @@ header {
   @apply grid;
   @apply grid-cols-3;
   @apply w-full;
+  @apply my-4;
 }
 
 .top3-col {
   @apply px-3;
+  
 }
 
 
