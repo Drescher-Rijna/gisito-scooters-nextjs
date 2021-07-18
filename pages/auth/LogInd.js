@@ -16,13 +16,13 @@ const LogInd = () => {
         e.preventDefault()
 
         try {
-        setError("")
-        setLoading(true)
-        await login(emailRef.current.value, passwordRef.current.value)
-        console.log(emailRef.current.value)
-        router.push('/')
+            setError("");
+            setLoading(true);
+            await login(emailRef.current.value, passwordRef.current.value);
+            console.log(emailRef.current.value);
+            router.push('/');
         } catch {
-        setError("Failed to log in")
+            setError("Failed to log in, you may have written an incorrect email or password");
         }
 
         setLoading(false)
@@ -43,6 +43,7 @@ const LogInd = () => {
                 <input type="password" ref={passwordRef} required />
 
                 <button type="submit" disabled={loading} >Log Ind</button>
+                {error != "" ? <p>{error}</p> : ""}
             </form>
         </div>
     )
