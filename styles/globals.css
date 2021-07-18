@@ -703,6 +703,9 @@ button:active {
   margin-top: 15px;
   color: #D8000C;
   background-color: #FFD2D2;
+  @apply rounded;
+  @apply border-2;
+  @apply border-red-700;
 }
 
 .error-message {
