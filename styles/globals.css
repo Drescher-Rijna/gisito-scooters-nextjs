@@ -900,6 +900,7 @@ button:active {
 
 #dele-gallery-navigation nav div:hover {
   background-color: #1C75BC;
+  font-weight: 600;
 }
 
 #dele-gallery-navigation nav div {
