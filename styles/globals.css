@@ -492,8 +492,8 @@ header {
   #menu-liste-desktop .nav-link-desktop {
       margin: 0;
       line-height: 45px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
       color: white;
       cursor: pointer;
   }
