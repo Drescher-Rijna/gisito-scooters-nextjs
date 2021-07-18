@@ -768,6 +768,15 @@ button:active {
     text-align: left;
 }
 
+#add-product-container h1 {
+  @apply text-5xl;
+
+}
+
+#add-product-container h3 {
+  @apply text-2xl;
+}
+
 #add-product-container button {
     cursor: pointer;
     background-color: #1C75BC;
