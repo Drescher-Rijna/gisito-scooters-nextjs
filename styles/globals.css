@@ -667,6 +667,7 @@ header {
 .auth-form input {
     margin-bottom: 2em;
     padding: 5px 10px;
+    outline: 1px solid darkgray;
 }
 
 .auth-form label {
