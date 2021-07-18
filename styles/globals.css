@@ -717,6 +717,8 @@ button:active {
   margin-top: 2em;
   padding-top: 2em;
   margin-bottom: 2em;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 .logind-container h2,
@@ -739,15 +741,15 @@ button:active {
 
 @media only screen and (min-width: 768px) {
     .OpretBruger-container {
-        margin: 0 35%;
+        margin: 2em 35%;
     }
     
     .logind-container {
-        margin: 0 35%;
+        margin: 2em 35%;
     }
 
     #profil-container {
-        margin: 0 35%;
+        margin: 2em 35%;
     }
 }
 
