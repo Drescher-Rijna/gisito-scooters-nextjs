@@ -697,6 +697,12 @@ button:active {
   margin: 2em 0 2em 0;
 }
 
+.logind-container h2,
+.OpretBruger-container h2 {
+  font-size: 38px;
+  margin-bottom: 1em;
+}
+
 /* PROFIL */
 #profil-container {
     margin: 0 2em;
