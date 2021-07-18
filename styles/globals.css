@@ -259,7 +259,7 @@ header {
   @apply py-3;
   @apply px-1;
   @apply w-95;
-  @apply border-1;
+  @apply border;
   @apply border-gray-800;
   @apply rounded;
 }
