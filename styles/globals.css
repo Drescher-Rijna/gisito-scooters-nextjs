@@ -658,7 +658,10 @@ header {
 .OpretBruger-container {
   margin-top: 2em;
   padding-top: 2em;
+  padding-bottom: 2em;
   margin-bottom: 2em;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 .auth-form {
@@ -716,6 +719,7 @@ button:active {
 .logind-container {
   margin-top: 2em;
   padding-top: 2em;
+  padding-bottom: 2em;
   margin-bottom: 2em;
   margin-right: 1em;
   margin-left: 1em;
