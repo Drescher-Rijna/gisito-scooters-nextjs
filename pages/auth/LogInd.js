@@ -43,7 +43,7 @@ const LogInd = () => {
                 <input type="password" ref={passwordRef} required />
 
                 <button type="submit" disabled={loading} >Log Ind</button>
-                {error != "" ? <p>{error}</p> : ""}
+                {error != "" ? <div className="error-message-container"><p className="error-message">{error}</p></div> : ""}
             </form>
         </div>
     )

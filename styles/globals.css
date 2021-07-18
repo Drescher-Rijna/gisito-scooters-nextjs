@@ -698,6 +698,17 @@ button:active {
   color: #1C75BC;
 }
 
+.error-message-container {
+  padding: 10px 15px;
+  margin-top: 15px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+
+.error-message {
+  color: #D8000C;
+}
+
 /* LOG IND */
 .logind-container {
   margin-top: 2em;
