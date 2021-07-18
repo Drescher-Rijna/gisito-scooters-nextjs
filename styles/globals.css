@@ -492,13 +492,11 @@ header {
   #menu-liste-desktop .nav-link-desktop:hover {
       background-color: #1C75BC;
       color: white;
-      font-weight: 600;
   }
 
   #menu-liste-desktop .nav-link-desktop:active {
       background-color: #1C75BC;
       color: white;
-      font-weight: 600;
   }
 
   #dropdown-liste-desktop {
@@ -592,6 +590,10 @@ header {
   text-decoration: none;
   color: #231f20;
   position: relative;
+}
+
+#top3-section {
+  padding-top: 1em;
 }
 
 #top3-section h1,
@@ -898,7 +900,6 @@ button:active {
 
 #dele-gallery-navigation nav div:hover {
   background-color: #1C75BC;
-  font-weight: 600;
 }
 
 #dele-gallery-navigation nav div {
@@ -933,8 +934,10 @@ button:active {
 }
 
 .gallery-col {
+  @apply my-2;
   @apply mb-8;
   @apply px-3;
+  
 }
 
 .gallery-container h1 {
@@ -951,7 +954,8 @@ button:active {
 }
 
 .gallery-container {
-  margin: 2em 15px;
+  margin: 2em 1em;
+  padding-top: 1em;
 }
 
 .gallery-container img {
