@@ -656,7 +656,8 @@ header {
 /* MOBIL */
 /* OPRET BRUGER */
 .OpretBruger-container {
-    margin: 2em 0 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .auth-form {
@@ -694,13 +695,14 @@ button:active {
 
 /* LOG IND */
 .logind-container {
-  margin: 2em 0 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .logind-container h2,
 .OpretBruger-container h2 {
   font-size: 38px;
-  margin-bottom: 1em;
+  margin-bottom: 10px;
 }
 
 /* PROFIL */
