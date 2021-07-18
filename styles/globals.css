@@ -806,6 +806,8 @@ button:active {
     margin-right: auto;
     margin-left: auto;
     padding: 7px 5px;
+    @apply border;
+    @apply border-gray-800;
 }
 
 #add-product-container select {
@@ -814,6 +816,8 @@ button:active {
     margin-left: auto;
     margin-bottom: 2em;
     padding: 7px 5px;
+    @apply border;
+    @apply border-gray-800;
 }
 
 .product-form {
@@ -828,6 +832,8 @@ button:active {
     padding: 8px 5px;
     margin-top: 3px;
     margin-bottom: 40px;
+    @apply border;
+    @apply border-gray-800;
 }
 
 .product-form textarea {
@@ -835,6 +841,8 @@ button:active {
     margin-top: 3px;
     margin-bottom: 40px;
     padding: 5px;
+    @apply border;
+    @apply border-gray-800;
 }
 
 .product-form .description {
