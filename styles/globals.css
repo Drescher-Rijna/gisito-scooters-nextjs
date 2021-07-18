@@ -289,6 +289,10 @@ header {
   @apply py-3;
 }
 
+.nav-link,
+.nav-link-desktop {
+  @apply text-lg;
+}
 
 /* DROPDOWN */
 /* CLICKS */
