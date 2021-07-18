@@ -57,9 +57,6 @@ const Opret = () => {
                     Opret Dig
                 </button>
             </form>
-            <div className="auth-link">
-               Har allerede en bruger?
-            </div>
         </div>
     )
 }
