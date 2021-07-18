@@ -29,7 +29,7 @@ export default function Home({ completes, bars, decks, wheels, allProducts }) {
         <Head>
         <title>Gisito Scooters</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon-logo.svg" />
+        <link rel="icon" href="/logo-favicon.svg" />
         </Head>
         <div className="content">
           <section id="hero-section">
