@@ -294,6 +294,10 @@ header {
   @apply text-lg;
 }
 
+.dropdown-link {
+  @apply text-base;
+}
+
 /* DROPDOWN */
 /* CLICKS */
 #menu-liste .nav-link:active {
