@@ -486,6 +486,7 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-left: 2em;
   }
 
   #menu-liste-desktop .nav-link-desktop {
