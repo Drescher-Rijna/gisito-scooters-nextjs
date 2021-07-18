@@ -694,6 +694,10 @@ button:active {
     background-color: dodgerblue;
 }
 
+.auth-link a {
+  color: #1C75BC;
+}
+
 /* LOG IND */
 .logind-container {
   margin-top: 2em;
