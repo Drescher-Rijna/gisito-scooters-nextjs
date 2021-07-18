@@ -1081,7 +1081,7 @@ button:active {
   margin-left: auto;
   padding: 10px 10px;
   width: 80%;
-  background-color: #1C75BC;
+  background-color: #00A14B ;
   cursor: pointer;
   color: white;
   font-weight: 700;
@@ -1096,7 +1096,7 @@ button:active {
   margin-left: auto;
   padding: 10px 10px;
   width: 80%;
-  background-color: #062e4f;
+  background-color: #015f2d ;
   cursor: pointer;
   color: white;
   font-weight: 700;
@@ -1120,7 +1120,7 @@ button:active {
   margin-top: 10px;
   padding: 10px 10px;
   width: 80%;
-  background-color: #00A14B;
+  background-color: #1C75BC;
   cursor: pointer;
   color: white;
   font-weight: 700;
