@@ -45,7 +45,7 @@ const LogInd = () => {
                 <button type="submit" disabled={loading} >Log Ind</button>
             </form>
             <div className="auth-link">
-                Har ikke en bruger? <Link href="/auth/Opret">Opret dig nu</Link>
+                Har ikke en bruger? 
             </div>
         </div>
     )
