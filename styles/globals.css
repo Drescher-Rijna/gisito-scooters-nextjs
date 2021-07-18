@@ -657,6 +657,7 @@ header {
 /* OPRET BRUGER */
 .OpretBruger-container {
   margin-top: 2em;
+  padding-top: 2em;
   margin-bottom: 2em;
 }
 
@@ -696,6 +697,7 @@ button:active {
 /* LOG IND */
 .logind-container {
   margin-top: 2em;
+  padding-top: 2em;
   margin-bottom: 2em;
 }
 
