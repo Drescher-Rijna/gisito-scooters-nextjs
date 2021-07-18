@@ -259,8 +259,8 @@ header {
   @apply py-3;
   @apply px-1;
   @apply w-95;
-  @apply border-2;
-  @apply border-black;
+  @apply border-1;
+  @apply border-gray-800;
   @apply rounded;
 }
 
@@ -656,7 +656,7 @@ header {
 /* MOBIL */
 /* OPRET BRUGER */
 .OpretBruger-container {
-    margin: 0 2em;
+    margin: 2em 0 2em 0;
 }
 
 .auth-form {
@@ -694,7 +694,7 @@ button:active {
 
 /* LOG IND */
 .logind-container {
-    margin: 0 2em;
+  margin: 2em 0 2em 0;
 }
 
 /* PROFIL */
